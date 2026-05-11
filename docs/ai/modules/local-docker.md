@@ -22,6 +22,10 @@ Current actions include:
 - The user preference on macOS is a lighter CLI-first Docker workflow, historically biased toward Colima or similar lightweight runtimes.
 - Keep this executor focused on explicit actions, not arbitrary shell wrappers.
 - If a local action changes Docker or service settings, the audit and operator docs should make rollback legible.
+- Do not transfer local Docker habits directly to Unraid DockerMan-managed
+  containers. Local `docker rm && docker run` rebuilds are fine for disposable
+  local runtimes, but on Unraid they can detach a container from its template and
+  break update-status visibility.
 
 ## Common Change Types
 

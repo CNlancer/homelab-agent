@@ -28,6 +28,29 @@ Current action surface includes:
 - This is the richest operational surface in the repo right now.
 - Changes here should preserve explicit rollback metadata and local audit context.
 - The repo convention is to keep credentials local and gitignored, with `local/secrets/unraid.json` as the target profile entrypoint.
+- Template-managed Docker containers on Unraid should remain DockerMan-managed.
+  Do not repair or update them with ad hoc `docker rm && docker run` commands
+  unless the user explicitly wants to abandon template management. Manual
+  recreation can remove the metadata that lets the Unraid UI show normal update
+  state.
+- For DockerMan-managed containers, prefer Unraid's own script when a CLI repair
+  is needed:
+
+```sh
+/usr/local/emhttp/plugins/dynamix.docker.manager/scripts/update_container <name>
+```
+
+- After a repair, verify `net.unraid.docker.managed=dockerman`, container
+  health, and the image/version labels. The live `seed-agent` repair used this
+  path to restore DockerMan management after an accidental manual recreate.
+- If SSH password auth is needed from a script, avoid letting local SSH keys
+  exhaust authentication attempts. Use explicit password-only SSH options such
+  as `PreferredAuthentications=password` and `PubkeyAuthentication=no` with the
+  repo's askpass pattern.
+- Clean up Docker image residue narrowly. Removing unused
+  `ghcr.io/team-cyan/seed-agent:<none>` images is acceptable when that exact
+  repository is the target, but avoid broad `docker system prune` operations on
+  the NAS host.
 
 ## Common Change Types
 

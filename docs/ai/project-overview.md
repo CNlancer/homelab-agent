@@ -27,6 +27,10 @@
 - `ExecutionService` resolves the action through `ActionRouter`, executes the registered handler, and persists an `ExecutionResult` through `AuditLogger`.
 - Target-specific behavior lives in executors and adapters under `src/homelab_agent/executors/`.
 - Unraid currently has the richest action surface, including read actions, proxy acceleration helpers, and local backup export.
+- Unraid Docker operations must respect the host's management layer. A
+  DockerMan template install should be updated or repaired through DockerMan's
+  template scripts, then verified through labels and health state, instead of
+  being recreated with generic Docker commands.
 
 ## Documentation Strategy
 
