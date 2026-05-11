@@ -31,6 +31,10 @@
   DockerMan template install should be updated or repaired through DockerMan's
   template scripts, then verified through labels and health state, instead of
   being recreated with generic Docker commands.
+- When the work originates in another repo, keep the handoff boundary explicit:
+  this repo may document or execute Unraid-safe actions only when the user asks
+  for that operational step. A pushed application change does not automatically
+  authorize a live NAS update.
 
 ## Documentation Strategy
 

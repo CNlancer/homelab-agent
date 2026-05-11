@@ -51,6 +51,13 @@ Current action surface includes:
   `ghcr.io/team-cyan/seed-agent:<none>` images is acceptable when that exact
   repository is the target, but avoid broad `docker system prune` operations on
   the NAS host.
+- When another repo has already pushed a new container image and the user says
+  they will update Unraid themselves, stop at the repo/GitHub boundary. Do not
+  SSH into Unraid or click DockerMan updates on their behalf.
+- For seed-agent style NAS services, separate three concerns in future sessions:
+  code changes and Git push in the app repo, Docker image publishing by CI, and
+  Unraid template update by the operator or an explicitly authorized Unraid
+  action.
 
 ## Common Change Types
 
