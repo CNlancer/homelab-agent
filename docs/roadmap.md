@@ -6,7 +6,7 @@
 - Local Docker executor with container listing, restart, runtime bootstrap, and Home Assistant deployment hooks
 - Unraid SSH executor with system info, container listing, proxy acceleration helpers, web UI proxy support, and boot config backup export
 - Early MikroTik executor for read-only inspection actions
-- Thin root `AGENTS.md` plus `CLAUDE.md` routing into the `docs/` knowledge base
+- Thin root `AGENTS.md`, `.agents/`, and `CLAUDE.md` routing into the `docs/` knowledge base
 - Shared harness kit bootstrap under `docs/ai/`
 - First-pass module docs for core runtime, local Docker, Unraid, and MikroTik
 

@@ -19,6 +19,7 @@ Do not start by reading every module doc or every operations note.
 ## Repository Model
 
 - `AGENTS.md`: thin agent entrypoint
+- `.agents/`: repo-local agent assets and reusable prompts
 - `docs/ai/`: reusable AI knowledge base
 - `docs/roadmap.md`: current repository state and next work
 - `docs/operations/`: operator workflows and handoff notes
@@ -29,6 +30,7 @@ Do not start by reading every module doc or every operations note.
 - Keep AI-facing docs in English.
 - Reply to the human user in their preferred language.
 - Prefer small, well-bounded sessions.
+- Keep `.agents/` thin; keep durable knowledge in `docs/`.
 - Preserve the controlled-action model instead of inventing unrestricted shell behavior.
 - Update the most relevant doc when the safe operating model materially changes.
 
@@ -49,6 +51,7 @@ Do not start by reading every module doc or every operations note.
 
 - `docs/README.md`
 - `docs/ai/project-overview.md`
+- `.agents/README.md`
 - `docs/ai/harness-workflow.md`
 - `docs/ai/reference-repos.md`
 - `docs/ai/modules/*.md`
