@@ -9,11 +9,17 @@
 - Thin root `AGENTS.md`, `.agents/`, and `CLAUDE.md` routing into the `docs/` knowledge base
 - Shared harness kit bootstrap under `docs/ai/`
 - First-pass module docs for core runtime, local Docker, Unraid, and MikroTik
+- Expanded Home Assistant AI docs for frontend dashboard/sidebar storage,
+  restart-safe automation timing, and recorder/trace-based debugging
+- Reviewed the live HA config after the bedroom/kitchen automation cleanup and
+  recorded the current switch, helper, and restart-safety rules
 
 ## In Progress
 
 - Keep Unraid operational docs and code paths in sync as new actions land
 - Tighten `docs/ai/` so future sessions can stay narrow without rediscovering safety assumptions
+- Keep Home Assistant live-ops knowledge current as dashboard, sidebar, and
+  automation patterns evolve
 
 ## Next
 

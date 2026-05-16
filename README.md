@@ -221,5 +221,5 @@ commands/backups/uninstall-daily-backup-launchd.sh
 
 - [Unraid Docker update check troubleshooting](docs/operations/2026-04-24-unraid-docker-update-check-troubleshooting.md)
 - [Home Assistant restart-triggered light false positives](docs/operations/2026-04-24-home-assistant-restart-light-false-positives.md)
-
-- [Unraid Docker update check troubleshooting](/Users/lancer/projects/homelab-agent/docs/operations/2026-04-24-unraid-docker-update-check-troubleshooting.md)
+- [Home Assistant area governance and Xiaomi dedupe](docs/operations/2026-04-29-home-assistant-area-governance-and-xiaomi-dedupe.md)
+- [Home Assistant full config review](docs/operations/2026-05-16-home-assistant-full-config-review.md)

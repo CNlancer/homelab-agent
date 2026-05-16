@@ -27,6 +27,9 @@
 - `ExecutionService` resolves the action through `ActionRouter`, executes the registered handler, and persists an `ExecutionResult` through `AuditLogger`.
 - Target-specific behavior lives in executors and adapters under `src/homelab_agent/executors/`.
 - Unraid currently has the richest action surface, including read actions, proxy acceleration helpers, and local backup export.
+- Home Assistant work spans both runtime control and mirrored config/state
+  maintenance under `local/home-assistant/config`, including YAML config,
+  `.storage` frontend data, and recorder/trace evidence.
 - Unraid Docker operations must respect the host's management layer. A
   DockerMan template install should be updated or repaired through DockerMan's
   template scripts, then verified through labels and health state, instead of
@@ -51,6 +54,7 @@
 - `docs/ai/modules/core-runtime.md`: router, service, audit, and task model
 - `docs/ai/modules/local-docker.md`: local Docker executor and bootstrap actions
 - `docs/ai/modules/unraid.md`: SSH-backed Unraid host and Docker actions
+- `docs/ai/modules/home-assistant.md`: live HA config, automation, entity, and verification patterns
 - `docs/ai/modules/mikrotik.md`: early MikroTik read-only surface
 
 ## Reference Backpressure
